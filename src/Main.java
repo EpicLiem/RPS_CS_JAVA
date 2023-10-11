@@ -8,7 +8,7 @@ public class Main {
         int computerscore = 0;
         int playerscore = 0;
         Random rand = new Random();
-        String[] choices = {"Rock", "Paper", "Scissors"};
+        String[] choices = {"Rock", "Paper", "Scissors"}; // going to try and take index of this instead of if statements or ? operator
         Scanner input = new Scanner(System.in);
 
         while (true) {
