@@ -15,9 +15,12 @@ public class Main {
             System.out.println("The score is " + playerscore + "(Player) to " + computerscore + "(Computer)");
             System.out.println("Rock, Paper, or Scissors?(R/P/S)");
             String userChoice = input.nextLine().toUpperCase();
-
+            if (userChoice.isEmpty()) { // wasn't catching empty input and would default to rock(weird java thing?)
+                System.out.println("Invalid input!");
+                continue;
+            }
             int userChoiceInt = "RPS".indexOf(userChoice); // honestly wasn't sure if this would work, but now I feel like a genius
-            if (userChoiceInt == -1) {
+            if (userChoiceInt == -1) { // had some issues with invalid input but some dude on stackoverflow had the answer
                 System.out.println("Invalid input!");
                 continue;
             }
